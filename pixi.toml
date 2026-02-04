@@ -1,0 +1,17 @@
+[workspace]
+authors = ["Morten Enemark Lund <melund@gmail.com>"]
+channels = ["https://prefix.dev/conda-forge"]
+name = "furo-feature-test"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+live = "sphinx-autobuild . _build -E --open-browser "
+build = "sphinx-build -b html . _build -E"
+
+[dependencies]
+sphinx = ">=8.2.3,<9"
+furo = ">=2024.8.6,<2025"
+sphinx-design = ">=0.7.0,<0.8"
+myst-parser = ">=5.0.0,<6"
+sphinx-autobuild = ">=2025.8.25,<2026"
