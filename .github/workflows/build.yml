@@ -3,8 +3,9 @@ name: build
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     tags: ["*"]
+  repository_dispatch: {}
 
 
 
