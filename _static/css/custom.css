@@ -1,0 +1,33 @@
+/* Custom CSS to style sd-dropdowns as a compact list/table */
+
+/*  used the :has(.member-entries) selector to specifically target the details
+(dropdown) containers that have the member-entries class in their summary. This
+ensures we only style the relevant dropdowns. */
+
+
+/* Base styling for the dropdown container */
+details.sd-dropdown.sd-card:has(.member-entries) {
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Collapse borders between adjacent rows */
+details.sd-dropdown.sd-card:has(.member-entries) + details.sd-dropdown.sd-card:has(.member-entries) {
+    margin-top: -1px !important;
+}
+
+/* Styling for the header/summary */
+details.sd-dropdown.sd-card:has(.member-entries) summary.sd-card-header {
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+/* Alternating background colors */
+summary.member-entries.odd {
+    background-color: var(--color-background-secondary) !important;
+}
+
+summary.member-entries.even {
+    background-color: var(--color-background-primary) !important;
+}
